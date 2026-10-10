@@ -1,7 +1,7 @@
-<h1 align="center">AeroTAXI — Web Platform</h1>
+<h1 align="center">AeroTAXI Web Platform</h1>
 
 <p align="center">
-  Airport transfer booking for twelve UK airports — quote, book, pay and manage,
+  Airport transfer booking for twelve UK airports: quote, book, pay and manage,
   with a full admin back office.
 </p>
 
@@ -59,15 +59,15 @@ cloud copy for deployed environments.
 
 ### Customer booking flow
 
-- **Quote** — pickup/dropoff with airport autocomplete across twelve UK airports
+- **Quote**: pickup/dropoff with airport autocomplete across twelve UK airports
   (LHR, LGW, STN, LTN, LCY, MAN, BHX, EDI, BRS, NCL, BFS, SEN)
-- **Vehicle selection** — saloon, estate, executive, people carrier, minibus and 16-seater,
+- **Vehicle selection**: saloon, estate, executive, people carrier, minibus and 16-seater,
   each priced independently
-- **Flight validation** — flight number checked against AviationStack, falling back to a
+- **Flight validation**: flight number checked against AviationStack, falling back to a
   regex parse of the airline code and number when no API key is configured
-- **Payment** — Stripe PaymentIntent created server-side, confirmed client-side
-- **Confirmation** — booking reference issued, emails sent to both customer and admin
-- **Lookup** — customers retrieve an existing booking by reference without an account
+- **Payment**: Stripe PaymentIntent created server-side, confirmed client-side
+- **Confirmation**: booking reference issued, emails sent to both customer and admin
+- **Lookup**: customers retrieve an existing booking by reference without an account
 
 ### Admin back office
 
@@ -133,7 +133,7 @@ TURSO_DATABASE_URL=...     # optional; only needed for cloud sync
 TURSO_AUTH_TOKEN=...
 ```
 
-Stripe runs in **test mode** — use Stripe's published test card numbers. No real charge
+Stripe runs in **test mode**, so use Stripe's published test card numbers. No real charge
 is ever made.
 
 A full walkthrough, including PHP extension requirements and troubleshooting, is in
@@ -145,8 +145,8 @@ A full walkthrough, including PHP extension requirements and troubleshooting, is
 
 Two paths are configured:
 
-- **Docker** — `Dockerfile` and `docker-start.sh` build a self-contained image
-- **Vercel** — `vercel.json` and `api/index.php` run Laravel on Vercel's PHP runtime
+- **Docker**: `Dockerfile` and `docker-start.sh` build a self-contained image
+- **Vercel**: `vercel.json` and `api/index.php` run Laravel on Vercel's PHP runtime
 
 ---
 
@@ -162,7 +162,7 @@ app/
   Mail/                    BookingConfirmation, AdminBookingNotification
   Console/Commands/        TursoSync, TursoPull
 database/migrations/       8 migrations
-resources/views/           Blade templates — public, booking, admin, legal, emails
+resources/views/           Blade templates: public, booking, admin, legal, emails
 routes/web.php             All public and admin routes
 ```
 
